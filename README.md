@@ -1,61 +1,66 @@
 Container App vs App Service
 ---------------------------
 Container App
-- The container app is a container that runs on a host machine. The container app can be a Windows container or a Linux container.
-- The container app can be deployed to a container host such as a Windows Server 2016 VM or a Linux VM.
-- It provides a flexible platform that supports a variety of container technologies such as Docker, Kubernetes, and Mesos.
+- Container app je kontajner, ktorý beží na hostiteľskom počítači. Container app môže byť kontajner Windows alebo kontajner Linux.
+- Container app možno nasadiť na hostiteľa kontajnera, ako je napríklad Windows Server 2016 VM alebo Linux VM.
+- Poskytuje flexibilnú platformu, ktorá podporuje rôzne technológie kontajnerov, ako sú Docker, Kubernetes a Mesos.
 
-Benefits of Container App
-- Easy Deployment: Container App makes it easy to deploy your application code with its support for multiple container technologies.
-- Automatic Scaling: With the Container App Service, you can automatically scale your application up or down based on demand, ensuring your app is always running optimally.
-- High Availability: Container App Service provides high availability for your application by automatically restarting your application if it crashes or becomes unresponsive.
-- Security: Container App Service provides security for your application by isolating it from other applications running on the same host machine.
+Benefity Container App
+- Jednoduché nasadenie: Container App uľahčuje nasadenie kódu aplikácie vďaka podpore viacerých kontajnerových technológií.
+- Automatické škálovanie: Pomocou služby Container App sa môže aplikácia automaticky škálovať nahor alebo nadol na základe dopytu, čím sa zaistí, že aplikácia bude vždy fungovať optimálne.
+- Vysoká dostupnosť: Container App poskytuje vysokú dostupnosť pre aplikáciu automatickým reštartovaním, ak zlyhá alebo prestane reagovať.
+- Zabezpečenie: Container App poskytuje zabezpečenie aplikácie tak, že ju izoluje od ostatných aplikácií spustených na rovnakom hostiteľskom počítači.
 
-Disadvantages of Container App
-Complexity: While Container App provides a flexible platform for containerized applications, it can be more complex to set up and manage than other Azure services.
+Nevýhody Container App
+Zložitosť: Zatiaľ čo Container App poskytuje flexibilnú platformu pre kontajnerové aplikácie, jej nastavenie a správa môže byť zložitejšia ako pri iných službách Azure.
 
 App Service
-- App Service is a platform as a service (PaaS) offering that enables you to quickly build, deploy, and scale enterprise-grade web applications on Windows or Linux using .NET, Java, Node.js, PHP, Python, or Ruby, as well as Docker containers.
-- App Service is a fully managed service that handles infrastructure maintenance, load balancing, and scaling for you.
+- App Service je platforma ako služba (PaaS), ktorá umožňuje rýchlo vytvárať, nasadzovať a škálovať podnikové webové aplikácie na Windows alebo Linux pomocou .NET, Java, Node.js, PHP, Python alebo Ruby ako aj kontajnery Docker.
+- App Service je plne spravovaná služba, ktorá sa stará o údržbu infraštruktúry, vyrovnávanie záťaže a škálovanie za nás.
 
-Benefits of App Service
-- Easy Deployment: App Service makes it easy to deploy your application code with its support for multiple programming languages and frameworks.
-- Automatic Scaling: With App Service, you can automatically scale your application up or down based on demand, ensuring your app is always running optimally.
+Benefity App Service
+- Jednoduché nasadenie: App Service uľahčuje nasadenie kódu aplikácie vďaka podpore viacerých programovacích jazykov a rámcov.
+- Automatické škálovanie: Pomocou App Service sa môže automaticky škálovať aplikácia nahor alebo nadol na základe dopytu, čím sa zaistí, že aplikácia bude vždy fungovať optimálne.
 
-Disadvantages of App Service
-- Limited Flexibility: App Service provides a limited set of programming languages and frameworks, which may not be suitable for all applications.
-- Limited Control: App Service provides limited control over the underlying infrastructure, which may not be suitable for all applications.
-- Higher Cost: App Service can be more expensive than other Azure services, especially for high-traffic applications.
+Nevýhody App Service
+- Obmedzená flexibilita: App Service poskytuje obmedzenú sadu programovacích jazykov a rámcov, ktoré nemusia byť vhodné pre všetky aplikácie.
+- Obmedzená kontrola: App Service poskytuje obmedzenú kontrolu nad základnou infraštruktúrou, ktorá nemusí byť vhodná pre všetky aplikácie.
+- Vyššie náklady: App Service môže byť drahšia ako iné služby Azure, najmä pre aplikácie s vysokou návštevnosťou.
 
-Differences
-- Container App is a container that runs on a host machine, while App Service is a platform as a service (PaaS).
-- Container App provides a flexible platform that supports a variety of container technologies such as Docker, Kubernetes, and Mesos, while App Service provides a limited set of programming languages and frameworks.
-- Container App Service may be more complex to set up and manage than App Service, while App Service may have more limited customization options than Container App Service.
+Rozdiely medzi App Service a Container App
+- Container App je kontajner, ktorý beží na hostiteľskom počítači, zatiaľ čo App Service je platforma ako služba (PaaS).
+- Container App poskytuje flexibilnú platformu, ktorá podporuje rôzne technológie kontajnerov, ako sú Docker, Kubernetes a Mesos, zatiaľ čo App Service poskytuje obmedzenú sadu programovacích jazykov a rámcov.
+- Container App môže byť zložitejšia na nastavenie a správu ako App Service, zatiaľ čo App Service môže mať obmedzenejšie možnosti prispôsobenia ako Container App.
 
 ---------------------------
 
-First need to create Dockerfile. Dockerfile is a text file that contains instructions for Docker to build an image.
+Najprv musíme vytvoriť súbor Dockerfile. Dockerfile je textový súbor, ktorý obsahuje pokyny pre Docker na vytvorenie obrázka.
 
 <img src="7.png" width="350">
-Then we need to build an image from the Dockerfile. To do that. Create repository on Docker Hub. I did it using commands. Now that i have a Dockerfile and a repository on Docker Hub, i can build an image and push it to the repository.
+Potom musíme vytvoriť obrázok z Dockerfile. Aby sme to spravili musíme vytvoriť úložisko na Docker Hub. Urobil som to pomocou príkazov. Teraz, keď mám súbor Dockerfile a úložisko na Docker Hub, môžem vytvoriť obrázok a vložiť ho do úložiska.
+
 <img src="5.png" width="350">
 <img src="6.png" width="350">
 
-Now I can create a container from the image. I did it on Azure Portal.
+Teraz môžem vytvoriť kontajner z obrázka. Urobil som to na portáli Azure.
+
 <img scr="1.png" width="350">
-Here it doesn't matter what region you choose. Just give it a name you want.
+Tu je jedno, aký región si vyberiete. Stačí mu dať meno, aké chcete.
+
 <img src="2.png" width="350">
-Here now we dont want the basic image but the one we created. So we will choose a image source as Docker Hub and give the image name and tag as the one we created. So for me it was lucifer21sk/ppt23-api:dev
+Tu teraz nechceme základný obrázok, ale ten, ktorý sme vytvorili. Vyberieme teda zdroj obrázka ako Docker Hub a dáme názov obrázka a značku ako ten, ktorý sme vytvorili. Takže u mňa to bol lucifer21sk/ppt23-api:dev
+
 <img src="3.png" width="350">
-Next we need to check that we are using HTTP endpoint.
+Ďalej musíme potvrdiť, že používame koncové body HTTP.
+
 <img src="4.png" width="350">
-We choose a port which we have in the Dockerfile. So for me it was 80. Then now we just create it and wait.
-After it is succesfull created we can see a link to the API. 
+Vyberieme port, ktorý máme v Dockerfile. Takže pre mňa to bolo 80. Potom to už len vytvoríme a čakáme. Po úspešnom vytvorení vidíme odkaz na API.
+
 <img src="8.png" width="350">
-Here we can see that my endpoint is working and i can see the data from the database.
+Tu vidíme, že môj koncový bod funguje a vidím údaje z databázy.
 
-Experience:
-It wasn't hard to do it. I had some problems with Dockerfile, because i never did something with Docker but i found a solution on the internet. I found some tutorials, and what i can say Container App i think is better for when i want to have frontend backend and everything in one place. App Service is better for when i want to have only backend or frontend, because it is easy to create on Azure Portal.
+Záver:
+Nebolo ťažké to urobiť. Mal som nejaké problémy s Dockerfile, pretože som nikdy nič nerobil s Dockerom, ale našiel som riešenie na internete. Našiel som nejaké návody a čo môžem povedať, Container App je podľa mňa lepšia, keď chcem mať frontend, backend a všetko na jednom mieste. App Service je lepšia, keď chcem mať iba backend alebo frontend, pretože je ľahké ju vytvoriť na Azure Portal.
 
-Here is link for my API: https://ppt23-api.wittywater-21d321f3.germanywestcentral.azurecontainerapps.io/
+Link na moju API: https://ppt23-api.wittywater-21d321f3.germanywestcentral.azurecontainerapps.io/
 
