@@ -35,23 +35,23 @@ Differences
 ---------------------------
 
 First need to create Dockerfile. Dockerfile is a text file that contains instructions for Docker to build an image.
-<img src="7.png">
+<img src="7.png" width="350">
 Then we need to build an image from the Dockerfile. I did it using commands.
 Then create repository on Docker Hub. I did it using commands. Now that i have a Dockerfile and a repository on Docker Hub, i can build an image and push it to the repository.
-<img src="5.png">
-<img src="6.png">
+<img src="5.png" width="350">
+<img src="6.png" width="350">
 
 Now I can create a container from the image. I did it on Azure Portal.
-<img scr="1.png">
+<img scr="1.png" width="350">
 Here it doesn't matter what region you choose. Just give it a name you want.
-<img src="2.png">
+<img src="2.png" width="350">
 Here now we dont want the basic image but the one we created. So we will choose a image source as Docker Hub and give the image name and tag as the one we created. So for me it was lucifer21sk/ppt23-api:dev
-<img src="3.png">
+<img src="3.png" width="350">
 Next we need to check that we are using HTTP endpoint.
-<img src="4.png">
+<img src="4.png" width="350">
 We choose a port which we have in the Dockerfile. So for me it was 80. Then now we just create it and wait.
 After it is succesfull created we can see a link to the API. 
-<img src="8.png">
+<img src="8.png" width="350">
 Here we can see that my endpoint is working and i can see the data from the database.
 
 Experience:
