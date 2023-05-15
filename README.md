@@ -35,9 +35,9 @@ Differences
 ---------------------------
 
 First need to create Dockerfile. Dockerfile is a text file that contains instructions for Docker to build an image.
+
 <img src="7.png" width="350">
-Then we need to build an image from the Dockerfile. I did it using commands.
-Then create repository on Docker Hub. I did it using commands. Now that i have a Dockerfile and a repository on Docker Hub, i can build an image and push it to the repository.
+Then we need to build an image from the Dockerfile. To do that. Create repository on Docker Hub. I did it using commands. Now that i have a Dockerfile and a repository on Docker Hub, i can build an image and push it to the repository.
 <img src="5.png" width="350">
 <img src="6.png" width="350">
 
